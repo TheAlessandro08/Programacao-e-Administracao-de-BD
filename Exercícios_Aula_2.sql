@@ -15,7 +15,7 @@ SELECT
 	c.ClienteId,
 	c.Nome,
 	p.Status,
-	p.DataPedido,	
+	p.DataPedido	
 FROM dbo.Clientes AS c
 INNER JOIN dbo.PedidosVenda AS p
 	ON c.ClienteId = p.ClienteId;
@@ -50,6 +50,7 @@ FROM dbo.Clientes AS c
 INNER JOIN dbo.PedidosVenda AS pv 
 	ON c.ClienteId=pv.ClienteId
 GROUP BY c.Nome HAVING COUNT(pv.PedidoVendaId)>3;
+
 
 
 
